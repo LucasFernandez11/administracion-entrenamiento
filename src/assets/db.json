@@ -1,0 +1,20 @@
+{
+  "contratos": [
+    { "id": 1, "codigo": "CONT-001", "descripcion": "Servicios Generales Q1", "fechaInicio": "2026-01-01", "estado": "Activo" },
+    { "id": 2, "codigo": "CONT-002", "descripcion": "Mantenimiento Planta", "fechaInicio": "2026-02-15", "estado": "Pendiente" }
+  ],
+  "contratistas": [
+    { "id": 1, "nombre": "Transportes Rápidos SRL", "cuit": "30-11111111-1", "contacto": { "nombre": "Juan Pérez", "telefono": "11223344" } },
+    { "id": 2, "nombre": "Maquinarias Pesadas SA", "cuit": "30-22222222-2", "contacto": { "nombre": "Maria Gonzalez", "telefono": "55667788" } }
+  ],
+  "personal": [
+    { "id": 1, "contratistaId": 1, "nombreCompleto": "Carlos Sanchez", "dni": "30123456", "rol": "Chofer" },
+    { "id": 2, "contratistaId": 2, "nombreCompleto": "Ana Torres", "dni": "35654321", "rol": "Operador Grúa" }
+  ],
+  "transporte": [
+    { "id": 1, "contratistaId": 1, "patente": "AB123CD", "tipo": "Camioneta", "capacidad": "1000kg" }
+  ],
+  "maquinaria": [
+    { "id": 1, "contratistaId": 2, "equipo": "Grúa Torre", "modelo": "CAT 320", "horasUso": 1500 }
+  ]
+}
