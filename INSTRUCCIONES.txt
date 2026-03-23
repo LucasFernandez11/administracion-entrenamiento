@@ -1,0 +1,71 @@
+========================================================================
+ PROYECTO DE PRÁCTICA: SISTEMA DE ADMINISTRACIÓN DE CONTRATATISTAS
+========================================================================
+
+1. OBJETIVO DEL PROYECTO
+------------------------------------------------------------------------
+El objetivo principal de esta aplicación es servir como un entorno de
+práctica pura de Frontend (Angular 17+).
+Simula un sistema de administración para una empresa principal que 
+gestiona a sus empresas subcontratistas, incluyendo sus contratos, 
+personal, transporte y maquinaria pesada.
+
+2. CÓMO DEBE FUNCIONAR
+------------------------------------------------------------------------
+Se espera que la aplicación funcione como una SPA (Single Page App) con
+5 ABMs o CRUDs (Crear, Leer, Actualizar y Eliminar) que controlen:
+  - Contratos
+  - Contratistas
+  - Personal
+  - Transporte
+  - Maquinaria
+
+Toda la persistencia de datos ocurre en memoria a través de servicios
+orientados a RxJS que leen inicialmente de un archivo `db.json` local.
+El usuario debe poder ingresar a cada listado de las entidades, ver los 
+datos correctos en grillas, y acceder a formularios asincrónicos para 
+crear datos nuevos, modificarlos, o ver su detalle.
+
+3. ACTIVIDAD REQUERIDA (DEBUGGING)
+------------------------------------------------------------------------
+¡Atención! Esta aplicación NO FUNCIONA CORRECTAMENTE a propósito.
+Se han inyectado diversos "bugs" o errores lógicos en el código para que
+el estudiante ponga a prueba sus habilidades de Debugging en Angular.
+
+Como estudiante, tu misión es encontrar y solucionar los siguientes 
+comportamientos anómalos:
+
+a) Bug de Estado / RxJS
+   --------------------
+   Intenta crear un nuevo Contratista (u otras entidades) en el 
+   formulario. Observarás que al volver a la lista, el registro no 
+   está. Debes investigar el código del componente del formulario y 
+   del DataService para ver qué asincronía o suscripción (subscribe) 
+   está faltando antes de que el router navegue.
+
+b) Errores de Interpolación Visual
+   -------------------------------
+   Navega a la lista de Contratistas. Verás que en una de las columnas
+   algunos datos se muestran como `[object Object]`. Tu tarea es revisar
+   el Template HTML del componente para acceder correctamente a las
+   propiedades anidadas de ese objeto.
+
+c) Operadores de Datos Defectuosos
+   -------------------------------
+   Navega a la lista de Maquinarias. Verás que hay un texto cruzado
+   y distorsionado en el Modelo. Tu tarea es encontrar el servicio
+   que provee esta información (DataService), ubicar el `.map()` que 
+   intencionalmente estropea la propiedad, y corregir la lógica para
+   que los datos en pantalla sean consistentes y correctos.
+
+d) Errores de Contexto o Entorno (Importaciones)
+   ---------------------------------------------
+   Si notas errores marcados en rojo en archivos core como el
+   `app.component.ts`, tu tarea es reparar las rutas relativas o ver
+   si tu servidor de TypeScript tiene algún conflicto, arreglando las
+   rutas o comprobando que los import/export coincidan con los de los 
+   componentes Layout generados.
+
+¡Buena suerte analizando el código, utilizando la consola del 
+navegador y reparando la aplicación!
+========================================================================
